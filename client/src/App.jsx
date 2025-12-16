@@ -5,17 +5,21 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login';
 import Todo from "./pages/Todo";
+import Register from './pages/Register';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element = {<Login/>}/>
-      <Route path='/todos' element = {<Todo/>}/>
-    </Routes>
-    </BrowserRouter>
+    <div className="min-h-screen bg-gray-100">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/todos' element={<Todo />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

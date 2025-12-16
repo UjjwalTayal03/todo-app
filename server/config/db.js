@@ -1,10 +1,10 @@
 import mongoose, { mongo } from 'mongoose'
 
-const dbURI = 'mongodb+srv://utubeuser:utubeuser1234@cluster0.9riqk.mongodb.net/'
+
 
 const connectDb = async () => {
     try {
-        await mongoose.connect(dbURI)
+        await mongoose.connect(process.env.MONGO_URI)
         console.log("Connected to MongoDB")
     } catch (error) {
         console.log("Connection Failed\n", error)

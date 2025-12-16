@@ -4,10 +4,14 @@ import connectDb from './config/db.js';
 import authRoutes from './routes/authRoutes.js'
 import testRoutes from './routes/testRoutes.js'
 import taskRoutes from './routes/taskRoutes.js'
+import dotenv from "dotenv";
+
+
 
 const app = express()
 
 app.use(express.json())
+dotenv.config();
 connectDb()
 
 app.use(cors())
