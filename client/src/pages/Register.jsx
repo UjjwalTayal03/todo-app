@@ -11,7 +11,7 @@ export default function Register() {
     const res = await api.post("/auth/register", { name, email, password });
     window.location.href = "/";
   };
-
+  
   const toLogin = () => {
     window.location.href = "/";
   };
