@@ -1,1 +1,1 @@
-console.log(x)
+function test( {
